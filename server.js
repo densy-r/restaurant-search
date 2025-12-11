@@ -7,6 +7,10 @@ require("dotenv").config();
 
 require("./seed");
 
+app.get("/", (req, res) => {
+  res.send("Restaurant Search API is running!");
+});
+
 app.use('/search', searchRouter);
 
 
